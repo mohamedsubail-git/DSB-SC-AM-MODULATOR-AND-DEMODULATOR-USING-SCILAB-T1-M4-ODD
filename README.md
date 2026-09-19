@@ -1,52 +1,78 @@
-# DSB-SC-AM-MODULATOR-AND-DEMODULATOR-USING-SCILAB-T1-M4-ODD
-# DSB-SC-AM MODULATOR AND DEMODULATOR
+# Generation-and-detection-of-AM-using-SCILAB---T1---M4---ODD
+# AIM
 
-## AIM
+To generate and detect the amplitude modulation and demodulation using SCILAB and to calculate modulation index of AM.
 
-To write a program to perform DSBSC modulation and demodulation using SCI LAB and study its spectral characteristics.
-
----
-
-## EQUIPMENTS REQUIRED
+# EQUIPMENTS REQUIRED
 
 * Computer with i3 Processor
 * SCI LAB
 
-> **Note:** Keep all the switch faults in off position.
+# THEORY
 
----
+Modulation can be defined as the process by which the characteristics of carrier wave are varied in accordance with the modulating wave (signal). Modulation is performed in a transmitter by a circuit called a modulator.
 
-## ALGORITHM
+Need for modulation is as follows:
 
-### 1. Define Parameters:
+* Avoid mixing of signals
+* Reduction in antenna height
+* Long distance communication
+* Multiplexing
+* Improve the quality of reception
+* Ease of radiation
 
-* **Fs:** Sampling frequency.
-* **T:** Duration of the signal.
-* **Fc:** Carrier frequency.
-* **Fm:** Frequency of the message signal.
-* **Amplitude:** Maximum amplitude of the message signal.
+Amplitude Modulation is the process of changing the amplitude of a relatively high frequency carrier signal in proportion with the instantaneous value of the modulating signal. The output waveform contains all the frequencies that make up the AM signal and is used to transport the information through the system. Therefore the shape of the modulated wave is called the AM envelope. With no modulating signal the output waveform is simply the carrier signal. Coefficient of modulation is a term used to describe the amount of amplitude change present in an AM waveform. There are three degrees of modulation available based on value of modulation index.
 
-### 2. Generate Signals:
+1. **Under modulation:** `m < 1`, `Em < Ec`
+2. **Critical modulation:** `m = 1`, `Em = Ec`
+3. **Over modulation:** `m > 1`, `Em > Ec`
 
-* **Message Signal:** A sinusoidal signal that will be modulated.
-* **Carrier Signal:** A high-frequency sinusoidal signal used for modulation.
+**Note:** Keep all the switch faults in off position.
 
-### 3. DSBSC Modulation:
+# ALGORITHM
 
-* **Modulated Signal:** Multiply the message signal by the carrier signal to produce the DSBSC signal.
+### 1. Define Parameters
 
-### 4. DSBSC Demodulation:
+First, define the parameters for your signals:
 
-* **Multiplication:** Multiply the modulated signal by the carrier signal to get the product of the message signal with itself (i.e., the original message signal plus high-frequency components).
-* **Low-pass Filtering:** Apply a Butterworth low-pass filter to remove the high-frequency components and recover the original message signal.
+* Carrier frequency (fc)
+* Modulating signal frequency (fm)
+* Sampling frequency (Fs)
+* Duration of the signal (T)
 
-### 5. Visualization:
+### 2. Create Time Vector
 
-Plot the message signal, carrier signal, DSBSC modulated signal, and the recovered signal after demodulation.
+Create a time vector based on the sampling frequency and duration.
 
----
+### 3. Create Modulating Signal
 
-## PROCEDURE
+Define the modulating signal (message signal).
+
+### 4. Create Carrier Signal
+
+Define the carrier signal.
+
+### 5. Perform Amplitude Modulation
+
+Multiply the carrier signal by the modulating signal plus 1 (to ensure the modulation depth).
+
+### 6. Plot the Signals
+
+Visualize the modulating, carrier, and modulated signals.
+
+### 7. Demodulate the AM Signal
+
+To demodulate, you can use envelope detection. One way is to rectify the signal and then apply a low-pass filter.
+
+### 8. Plot the Demodulated Signal
+
+Visualize the demodulated signal.
+
+### 9. Compare Signals
+
+Compare the original modulating signal with the demodulated signal.
+
+# PROCEDURE
 
 * Refer Algorithms and write code for the experiment.
 * Open SCILAB in System.
@@ -56,25 +82,20 @@ Plot the message signal, carrier signal, DSBSC modulated signal, and the recover
 * If any Error, correct it in code and execute again.
 * Verify the generated waveform using Tabulation and Model Waveform.
 
----
+# TABULATION
 
-## TABULATION
+   
+   <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/f0948126-4c97-4882-ae32-d46429cb366e" />
 
-| Sl. No. | SIGNAL                 | AMPLITUDE (V)  | FREQUENCY (Hz) |
-| ------- | ---------------------- | -------------- | -------------- |
-| **1**   | **Message Signal**     | **Theory:**    | **Theory:**    |
-|         |                        | **Practical:** | **Practical:** |
-| **2**   | **Carrier Signal**     | **Theory:**    | **Theory:**    |
-|         |                        | **Practical:** | **Practical:** |
-| **3**   | **Modulated Signal**   | **Practical:** |                |
-|         |                        | **Emax =**     |                |
-|         |                        | **Emin =**     |                |
-| **4**   | **Demodulated Signal** | **Practical:** |                |
+# GRAPH:
+<img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/f80b9b72-fb1c-4d98-adbd-d04c24a14b98" />
 
----
 
-## MODEL GRAPH
+# CALCULATION
+<img width="899" height="1599" alt="image" src="https://github.com/user-attachments/assets/c9cb7a85-1b04-4542-9342-2a5f0bb285d7" />
 
-**Practical**
 
----
+RESULT: Thus the amplitude modulation and demodulation is experimentally done and the output is verified. 
+
+
+
